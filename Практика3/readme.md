@@ -140,6 +140,7 @@ public class StudentRunner {
 ```
 
 Результат работы программы:
+
 ![All text](Strategy/screenhots/1.png)
 
 Диаграмма:
@@ -255,6 +256,7 @@ public class WebsiteRunner {
 ```
 
 Результат работы программы:
+
 ![All text](Template_Method/screenhots/2.png)
 
 Диаграмма:
