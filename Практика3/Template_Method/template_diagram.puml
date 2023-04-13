@@ -1,0 +1,19 @@
+@startuml
+abstract class Template_Method.WebsiteTemplate {
++ void showPage()
++ {abstract}void showPageContent()
+}
+class Template_Method.WebsiteRunner {
++ {static} void main(String[])
+}
+class Template_Method.WelcomePage {
++ void showPageContent()
+}
+class Template_Method.NewsPage {
++ void showPageContent()
+}
+
+
+Template_Method.WebsiteTemplate <|-- Template_Method.WelcomePage
+Template_Method.WebsiteTemplate <|-- Template_Method.NewsPage
+@enduml
