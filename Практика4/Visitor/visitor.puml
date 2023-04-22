@@ -1,0 +1,44 @@
+@startuml
+interface Visitor.Developer {
++ void create(ProjectClass)
++ void create(DataBase)
++ void create(Test)
+}
+class Visitor.SeniorDeveloper {
++ void create(ProjectClass)
++ void create(DataBase)
++ void create(Test)
+}
+class Visitor.Test {
++ void beWritten(Developer)
+}
+class Visitor.JuniorDeveloper {
++ void create(ProjectClass)
++ void create(DataBase)
++ void create(Test)
+}
+class Visitor.ProjectClass {
++ void beWritten(Developer)
+}
+class Visitor.ProjectRunner {
++ {static} void main(String[])
+}
+interface Visitor.ProjectElement {
++ void beWritten(Developer)
+}
+class Visitor.DataBase {
++ void beWritten(Developer)
+}
+class Visitor.Project {
+~ ProjectElement[] projectElements
++ void beWritten(Developer)
+}
+
+
+Visitor.Developer <|.. Visitor.SeniorDeveloper
+Visitor.ProjectElement <|.. Visitor.Test
+Visitor.Developer <|.. Visitor.JuniorDeveloper
+Visitor.ProjectElement <|.. Visitor.ProjectClass
+Visitor.ProjectElement <|.. Visitor.DataBase
+Visitor.ProjectElement <|.. Visitor.Project
+@enduml
