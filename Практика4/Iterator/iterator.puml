@@ -1,0 +1,27 @@
+@startuml
+interface Iterator.Iterator {
++ boolean hasNext()
++ Object next()
+}
+interface Iterator.Collection {
+~ Iterator getIterator()
+}
+class Iterator.JavaDeveloperRunner {
++ {static} void main(String[])
+}
+class Iterator.JavaDeveloper {
+- String name
+- String[] skills
++ String getName()
++ void setName(String)
++ String[] getSkills()
++ void setSkills()
++ Iterator getIterator()
+}
+
+
+
+Iterator.Collection <|.. Iterator.JavaDeveloper
+Iterator.JavaDeveloperRunner ..> Iterator.JavaDeveloper
+
+@enduml
